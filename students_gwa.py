@@ -20,4 +20,17 @@ class StudentGwaAnalyzer:
             if gwa < lowest_number:
                 lowest_number = gwa
                 top_name = name
-                
+#print output
+        print("Top Student: ")
+        print("Name: ", top_name)
+        print("GWA:", lowest_number)
+        print(f"\033[92mAng galing, sipag mo ah maangas ka!\033[0m")
+
+
+def main():
+    analyzer = StudentGwaAnalyzer("students.txt")
+    analyzer.student_data()
+    analyzer.print_highest_gwa()
+
+
+main()
