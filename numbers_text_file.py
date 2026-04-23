@@ -24,3 +24,10 @@ class NumberSeparator:
                 write_connection.write(str(integer_value) + "\n")
 
         write_connection.close()
+#main execution for user to input desired numbers
+def main():
+    separator = NumberSeparator("numbers.txt")
+    separator.load_numbers_from_file()
+
+    user_input = int(input("Enter 2 for even numbers, 1 for odd numbers to save: "))
+    separator.partition_and_save_numbers(user_input)
