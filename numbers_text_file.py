@@ -1,9 +1,26 @@
+#class constructor
 class NumberSeparator:
     def __init__(self, source_filename):
         self.source_filename = source_filename
         self.extracted_lines = []
-
+#open and read step
     def load_numbers_from_file(self):
         read_connection = open(self.source_filename, "r")
         self.extracted_lines = read_connection.readlines()
         read_connection.close()
+#partition and save numbers using loop and conditional statement
+    def partition_and_save_numbers(self, user_select):
+        if user_select == 0:
+            output_filename = "even.txt"
+        else:
+            output_filename = "odd.txt"
+
+        write_connection = open(output_filename, "w")
+
+        for i in range (0, len(self.extracted_lines)):
+            integer_value = int(self.extracted_lines[i].strip())
+
+            if integer_value % 2 == user_select:
+                write_connection.write(str(integer_value) + "\n")
+
+        write_connection.close()
