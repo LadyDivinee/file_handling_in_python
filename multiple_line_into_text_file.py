@@ -12,3 +12,9 @@ class MottosInLife:
             options_from_user = input("Do you want to add more? Yes or No: ").lower()
             if options_from_user == "no":
                 break
+#finalize output
+        file.close()
+        print("Wow, these are inspiring! Thank you. These are saved in", self.filename)
+
+writer = MottosInLife()
+writer.enter_motto()
