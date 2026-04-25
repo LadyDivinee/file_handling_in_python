@@ -7,3 +7,12 @@ class IntegerNumbers:
         file_of_integers = open(self.file, "r")
         even_file = open("double.txt", "w")
         odd_file = open("triple.txt", "w")
+#checking if even or odd
+        for line in file_of_integers:
+            number = int(line.strip())
+            if number % 2 == 0:
+                double_number = number * number
+                print(double_number, file =  even_file)
+            else:
+                triple_number = number * number * number
+                print(triple_number, file = odd_file)
