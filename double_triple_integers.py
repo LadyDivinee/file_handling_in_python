@@ -16,3 +16,7 @@ class IntegerNumbers:
             else:
                 triple_number = number * number * number
                 print(triple_number, file = odd_file)
+#save the data
+        file_of_integers.close()
+        even_file.close()
+        odd_file.close()
