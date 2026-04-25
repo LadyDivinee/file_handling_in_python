@@ -1,10 +1,10 @@
 #class constructor
 class MottosInLife:
     def __init__(self):
-        self.filename = "mylife.txt"
+        self.file_name = "mylife.txt"
 #asking the input from the user
     def enter_motto(self):
-        file = open(self.filename, "a")
+        file = open(self.file_name, "a")
 #for loop asking
         while True:
             input_line = input("Hi! Enter your motto in life: ")
@@ -14,7 +14,7 @@ class MottosInLife:
                 break
 #finalize output
         file.close()
-        print("Wow, these are inspiring! Thank you. These are saved in", self.filename)
+        print("Wow, these are inspiring! Thank you. These are saved in", self.file_name)
 
 writer = MottosInLife()
 writer.enter_motto()
