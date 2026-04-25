@@ -20,3 +20,8 @@ class IntegerNumbers:
         file_of_integers.close()
         even_file.close()
         odd_file.close()
+#show the final output
+        print("All done! You're desired separation of numbers have been created.")
+
+processor = IntegerNumbers()
+processor.integers_in_file()
